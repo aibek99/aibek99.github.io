@@ -7,7 +7,6 @@
     <title>My personal webpage</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-    <script src="/script.js"></script>
 </head>
 <body>
     <div class="person">
@@ -26,30 +25,33 @@
             <p>Welcome to my personal webpage! <br> My name is <span>Aibek</span> and this website serves as a platform to showcase my work and interests.  
                 Here <br> you will find information about me, my projects, and how to get in touch. I hope you enjoy exploring <br> my site and learning more about me. Thank you for visiting!</p>
             <br><br>
-            <h2>Facts about me</h2>
-            <ul id="facts-about-me">
-                <li>3rd year student at Innopolis University</li>
-                <li>major is Software Development</li>
-                <li>love to solve algorithmic problems</li>
-                <li>love to play football</li>
-                <li>
-                    <a href="https://codeforces.com/profile/myway">
-                        Codeforces
-                    </a>
-                    account
-                </li>
-                <li>
-                    <a href="https://leetcode.com/aba99/">
-                        Leetcode
-                    </a> 
-                    account
-                </li>
-            </ul>
-        </div>
 
-        <div id="comic-container">
-            <button id="btnClick">Get image</button>
-            <img id="image">
+            <div class="container">
+                <div>
+                    <h2>Facts about me</h2>
+                    <ul id="facts-about-me">
+                        <li>3rd year student at Innopolis University</li>
+                        <li>major is Software Development</li>
+                        <li>love to solve algorithmic problems</li>
+                        <li>love to play football</li>
+                        <li>
+                            <a href="https://codeforces.com/profile/myway">Codeforces</a> account
+                        </li>
+                        <li>
+                            <a href="https://leetcode.com/aba99/">Leetcode</a> account
+                        </li>
+                    </ul>
+                </div>
+            
+                <div id="comic-container">
+                    <h2>Comic Image</h2>
+                    <button id="getComicButton">Get Comic</button>
+                    <div id="comicDisplay"></div>
+                    <script src="script.js"></script>
+                </div>
+            </div>
+            
+            
         </div>
 
     </div>

@@ -1,32 +1,54 @@
 const email = 'a.bakirov@innopolis.university';
-const apiUrl = `https://fwd.innopolis.app/api/hw2?email=${email}`;
+const url = 'https://fwd.innopolis.app/api/hw2';
+const params = new URLSearchParams();
+params.append('email', email);
+const apiUrl = `${url}?${params.toString()}`;
 
-let btn = document.getElementById('btnClick')
-let image = document.getElementById('image')
+const getComicButton = document.getElementById('getComicButton');
+const comicDisplay = document.getElementById('comicDisplay');
 
-btn.addEventListener('click', function() {
+getComicButton.addEventListener('click', () => {
+    while (comicDisplay.firstChild) {
+      comicDisplay.removeChild(comicDisplay.firstChild);
+    }
     fetch(apiUrl)
-    .then(response => response.json())
-    .then(data => {
-        const id = data.comic;
-        const xkcdApiUrl = `https://getxkcd.vercel.app/api/comic?num=${id}`;
-        return fetch(xkcdApiUrl);
-    })
-    .then(response => response.json())
-    .then(data => {
-        const img = document.createElement('img');
-        img.src = data.img;
-        img.alt = data.alt;
-        const title = document.createElement('h2');
-        title.textContent = data.title;
-        const comicDate = document.createElement('p');
-        const date = new Date(data.year, data.month - 1, data.day);
-        comicDate.textContent = `Uploaded on ${date.toLocaleDateString()}`;
-        const container = document.querySelector('#comic-container');
-        container.appendChild(img);
-        container.appendChild(title);
-        container.appendChild(comicDate);
-        image.src = data.message
-    })
-    .catch(error => console.error(error));
-})
+      .then(response => response.text())
+      .then(number => {
+        const params = new URLSearchParams({ num: number });
+        const url = `https://getxkcd.vercel.app/api/comic?${params.toString()}`;
+        fetch(url)
+          .then(response => response.json())
+          .then(data => {
+            const image = data.img;
+            const title = data.title;
+            const alt = data.alt;
+            const year = data.year;
+            const month = data.month;
+            const day = data.day;
+            const imgElement = document.createElement('img');
+            imgElement.src = image;
+            imgElement.alt = alt;
+            comicDisplay.appendChild(imgElement);
+            const titleElement = document.createElement('h2');
+            titleElement.textContent = title;
+            comicDisplay.appendChild(titleElement);
+            const dateElement = document.createElement('p');
+            const date = new Date(year, month - 1, day);
+            dateElement.textContent = `Uploaded on ${date.toLocaleDateString()}`;
+            comicDisplay.appendChild(dateElement);
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            const errorElement = document.createElement('p');
+            errorElement.textContent = 'An error occurred while retrieving the comic.';
+            comicDisplay.appendChild(errorElement);
+          });
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        const errorElement = document.createElement('p');
+        errorElement.textContent = 'An error occurred while retrieving the number.';
+        comicDisplay.appendChild(errorElement);
+      });
+  });
+  
