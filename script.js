@@ -51,4 +51,11 @@ getComicButton.addEventListener('click', () => {
         comicDisplay.appendChild(errorElement);
       });
   });
-  
+
+
+
+
+
+
+
+
