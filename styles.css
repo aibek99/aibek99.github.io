@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    background-image: url(/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.person, .projects {
+    position: relative;
+    width: 92%;
+    height: 100vh;
+}
+
+.contacts {
+    position: relative;
+    width: 92%;
+    height: 20vh;
+}
+
+nav {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    padding: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li, .contacts ul li {
+    display: inline-block;
+    list-style: none;
+    font-size: 25px;
+    margin: 10px 40px;
+}
+
+#facts-about-me {
+    list-style: none;
+    font-size: 20px;
+    margin: 10px 10px;
+    color: #333;
+}
+
+a { 
+    text-decoration: none;
+    color: teal;
+    font-weight: bold;
+}
+
+a:visited {
+    color: teal;
+    text-decoration: none;
+}
+
+#contact-icons { 
+    text-decoration: none;
+    font-weight: bold;
+    padding-top: 30px;
+    padding-bottom: 120px;
+}
+
+
+#logoPerson {
+    text-decoration: none;
+    font-family:'Brush Script MT', cursive;
+    font-size: 30px;
+    color: black;
+    font-weight: bold;
+}
+
+span {
+    color: teal;
+    font-family: 'Brush Script MT', cursive;
+}
+
+ul li a:hover {
+    color: blueviolet;
+}
+
+.aboutme, .projects, .contacts {
+    margin-left: 8%;
+    margin-top: 15%;
+}
+
+.aboutme h1, .projects h1, .contacts h1 {
+    font-size: 50px;
+    color: black;
+    margin-bottom: 20px;
+} 
+
+
+.aboutme h2, .projects h2, .contacts h2 {
+    font-size: 25px;
+    color: black;
+    margin-bottom: 20px;
+} 
+
+.aboutme p, .projects p, .contacts {
+    color: #333;
+    line-height: 22px;
+    font-size: 20px;
+}
