@@ -1,0 +1,1 @@
+const email = "a.bakirov@innopolis.university"
