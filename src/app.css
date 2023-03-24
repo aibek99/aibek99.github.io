@@ -11,6 +11,11 @@ body {
     flex-wrap: wrap;
 }
 
+.main-part {
+    display: flex;
+    flex-direction: column;
+}
+
 .window {
     position: relative;
     width: 92%;
