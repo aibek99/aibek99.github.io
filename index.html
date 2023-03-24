@@ -7,92 +7,114 @@
     <title>My personal webpage</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script type="module" src="/src/main.js"></script>
 </head>
 <body>
-    <div class="person">
+
+    <div class="header-footer">
         <nav>
             <div id="logoPerson">Aibek <span>Bakirov</span></div>
-            <ul>
-                <li><a href="#logoPerson">ABOUT ME</a></li>
+            <ul class="logoPerson">
+                <li><a href="#aboutme">ABOUT ME</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="#contacts">CONTACTS</a></li>
             </ul>
         </nav>
+    </div>
 
-        <div class="aboutme">
+    <div class="window" id="aboutme">
+
+        <div class="item">
             <h1>About me</h1>
-            <br>
-            <p>Welcome to my personal webpage! <br> My name is <span>Aibek</span> and this website serves as a platform to showcase my work and interests.  
-                Here <br> you will find information about me, my projects, and how to get in touch. I hope you enjoy exploring <br> my site and learning more about me. Thank you for visiting!</p>
-            <br><br>
-            <h2>Facts about me</h2>
-            <ul id="facts-about-me">
-                <li>3rd year student at Innopolis University</li>
-                <li>major is Software Development</li>
-                <li>love to solve algorithmic problems</li>
-                <li>love to play football</li>
-                <li>
-                    <a href="https://codeforces.com/profile/myway">
-                        Codeforces
-                    </a>
-                    account
-                </li>
-                <li>
-                    <a href="https://leetcode.com/aba99/">
-                        Leetcode
-                    </a> 
-                    account
-                </li>
-            </ul>
-                
+            <p>Welcome to my personal webpage! My name is <span>Aibek</span> and this website serves as a platform to showcase my work and interests.  
+                Here you will find information about me, my projects, and how to get in touch. I hope you enjoy exploring my site and learning more about me. Thank you for visiting!</p>
         </div>
+        <ul class="container"> 
+            <li class="item">
+                <h2>Facts about me</h2>
+                <ul class="aboutme">
+                    <li class="item">3rd year student at Innopolis University</li>
+                    <li class="item">major is Software Development</li>
+                    <li class="item">love to solve algorithmic problems</li>
+                    <li class="item">love to play football</li>
+                    <li class="item">
+                        <a href="https://codeforces.com/profile/myway">
+                            Codeforces
+                        </a>
+                        account
+                    </li>
+                    <li class="item">
+                        <a href="https://leetcode.com/aba99/">
+                            Leetcode
+                        </a> 
+                        account
+                    </li>
+                </ul>
+            </li>
 
+            <li class="item">
+                <h2>Comic Image</h2>
+                <button class="comicImage" id="comicImage">Get Comic</button>
+                <div class="comicDisplay" id="comicDisplay"></div>
+            </li>
+        </ul>
     </div>
 
-    
-
-    <div class="projects" id="projects">
-        <h1>Projects</h1>
-        <br><br><br>
-        <h2>Battleship</h2>
-        <p>This project is a game, which you can play with an opponent. Firstly, players need to place a five <br> ships on the field. In order to place a ship, you must enter coordinates of the ship's head and tail.</p>
-        <br><br><br>
-        <h2>Numerical Methods for Solving Ordinary Differential Equations</h2>
-        <p>This repository contains implementations of four numerical methods for solving ordinary differential <br> equations (ODEs): Euler method, Improved Euler method, Numerical method, and Runge-Kutta <br> method.</p>
+    <div class="window" id="projects">
+        <ul>
+            <li class="item">
+                <h1>Projects</h1>
+            </li>
+            <li class="item">
+                <ul class="projects">
+                    <li class="item">
+                        <h2>Battleship</h2>
+                        <p>This project is a game, which you can play with an opponent. Firstly, players need to place a five ships on the field. In order to place a ship, you must enter coordinates of the ship's head and tail.</p>
+                    </li>
+                    <li class="item">
+                        <h2>Numerical Methods for Solving Ordinary Differential Equations</h2>
+                        <p>This repository contains implementations of four numerical methods for solving ordinary differential equations (ODEs): Euler method, Improved Euler method, Numerical method, and Runge-Kutta method.</p>
+                    </li>
+                </ul>
+            </li>
+        </ul>
     </div>
 
-    <div class="contacts" id="contacts">
+    <div class="header-footer" id="contacts">
         <h1>Contacts</h1>
-        <section>
-            <ul id="contact-icons">      
-                <li>
-                    <a id="tg-link" class="fab fa-telegram" href="https://t.me/bakirov817">                    
-                        Telegram
-                    </a>
-                </li>
-                <li>
-                    <a class="fab fa-linkedin" href="https://www.linkedin.com/in/aibek-bakirov-278262161/">
-                        Linkedin
-                    </a>
-                </li>
-                <li>
-                    <a id="gh-link" class="fab fa-github" href="https://github.com/aibek99">
-                        Github
-                    </a>
-                </li>
-                <li>
-                    <a class="fab fa-gitlab" href="https://gitlab.com/aibek99">
-                        Gitlab
-                    </a>
-                </li>
-                <li>
-                    <a email="email" class="fas fa-envelope fa" href="mailto:aibek.bakirov.kk@email.com">
-                        email
-                    </a>
-                </li>
-            </ul>           
-        </section>
+        <ul>
+            <li class="item">
+                <ul class="container">      
+                    <li class="item">
+                        <a class="fab fa-telegram" href="https://t.me/bakirov817">                    
+                            Telegram
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a class="fab fa-linkedin" href="https://www.linkedin.com/in/aibek-bakirov-278262161/">
+                            Linkedin
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a class="fab fa-github" href="https://github.com/aibek99">
+                            Github
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a class="fab fa-gitlab" href="https://gitlab.com/aibek99">
+                            Gitlab
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a class="fas fa-envelope fa" href="mailto:aibek.bakirov.kk@email.com">
+                            email
+                        </a>
+                    </li>
+                </ul>    
+            </li>  
+        </ul>
     </div>
+
 </body>
 </html>
 

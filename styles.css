@@ -1,52 +1,30 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
 
 body {
     background-image: url(/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 }
 
-.person, .projects {
+.window {
     position: relative;
     width: 92%;
     height: 100vh;
+    margin-top: 15%;    
 }
 
-.contacts {
+.header-footer {
     position: relative;
     width: 92%;
-    height: 20vh;
+    height: 20vh;    
 }
 
-nav {
-    display: flex;
-    width: 70%;
-    margin: auto;
-    padding: 100px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-nav ul li, .contacts ul li {
-    display: inline-block;
-    list-style: none;
-    font-size: 25px;
-    margin: 10px 40px;
-}
-
-#facts-about-me {
-    list-style: none;
-    font-size: 20px;
-    margin: 10px 10px;
-    color: #333;
-}
-
-a { 
+a {
     text-decoration: none;
     color: teal;
     font-weight: bold;
@@ -57,20 +35,18 @@ a:visited {
     text-decoration: none;
 }
 
-#contact-icons { 
-    text-decoration: none;
-    font-weight: bold;
-    padding-top: 30px;
-    padding-bottom: 120px;
+a:hover {
+    color: blueviolet;
 }
 
+p {
+    position: relative;
+    width: 65%;
+}
 
-#logoPerson {
-    text-decoration: none;
-    font-family:'Brush Script MT', cursive;
-    font-size: 30px;
-    color: black;
-    font-weight: bold;
+h2 {
+    position: relative;
+    width: 65%;
 }
 
 span {
@@ -78,30 +54,77 @@ span {
     font-family: 'Brush Script MT', cursive;
 }
 
-ul li a:hover {
-    color: blueviolet;
+*{
+    font-family: sans-serif;
 }
 
-.aboutme, .projects, .contacts {
+/* <navigator> */
+nav {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    padding: 100px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style: none;
+    font-size: 27px;
+    margin: 10px 40px;
+}
+
+#logoPerson {
+    text-decoration: none;
+    font-family:'Brush Script MT', cursive;
+    font-size: 35px;
+    color: black;
+    font-weight: bold;
+}
+/* </navigator> */
+
+/* <aboutme> */
+.aboutme {
+    display: flex;
+    flex-direction: column;
+}
+
+.comicImage {
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    font-family:'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+.window .comicDisplay {
+    
+}
+/* </aboutme> */
+
+/* <projects> */
+.projects {
+    display: flex;
+    flex-direction: column;
+}
+/* </projects> */
+
+/* <Contact> */
+.container {
+    display: flex;
+}
+
+.item {
+    display: inline-block;
+    list-style: none;
+    font-size: 25px;
+    margin: 10px 40px;
+}
+
+#contacts {
     margin-left: 8%;
     margin-top: 15%;
 }
+/*  </Contact>  */
 
-.aboutme h1, .projects h1, .contacts h1 {
-    font-size: 50px;
-    color: black;
-    margin-bottom: 20px;
-} 
-
-
-.aboutme h2, .projects h2, .contacts h2 {
-    font-size: 25px;
-    color: black;
-    margin-bottom: 20px;
-} 
-
-.aboutme p, .projects p, .contacts {
-    color: #333;
-    line-height: 22px;
-    font-size: 20px;
-}
