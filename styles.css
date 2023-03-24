@@ -89,17 +89,29 @@ nav ul li {
     display: flex;
     flex-direction: column;
 }
+
+.comicImage {
+    background-color: white;
+    color: black;
+    font-size: 25px;
+    font-family:'Times New Roman', Times, serif;
+    cursor: pointer;
+}
+
+.window .comicDisplay {
+    
+}
 /* </aboutme> */
 
 /* <projects> */
-    .projects {
+.projects {
     display: flex;
     flex-direction: column;
 }
 /* </projects> */
 
 /* <Contact> */
-    .container {
+.container {
     display: flex;
 }
 
