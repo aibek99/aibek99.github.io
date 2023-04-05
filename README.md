@@ -1,14 +1,38 @@
-## Personal Website
+# create-svelte
 
-Dear visitors,
+Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
 
-Welcome to [my personal webpage](https://aibek99.github.io/) repository on GitHub! My name is Aibek Bakirov, and I'm excited to share my passion for web development and design with you.
+## Creating a project
 
-Here you will find the code and files that power [my personal webpage](https://aibek99.github.io/), along with any updates and improvements I make along the way. I believe that sharing my work openly is essential to the growth of the web development community, and I hope that my repository can serve as a useful resource for fellow developers and enthusiasts.
+If you're seeing this, you've probably already done this step. Congrats!
 
-Please feel free to explore my code and provide feedback or suggestions. I am always looking to improve my skills and knowledge, and I appreciate any input that can help me achieve that goal.
+```bash
+# create a new project in the current directory
+npm create svelte@latest
 
-Thank you for taking the time to visit my repository, and I hope you find it informative and enjoyable!
+# create a new project in my-app
+npm create svelte@latest my-app
+```
 
-Best regards,  
-Aibek Bakirov
+## Developing
+
+Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+
+```bash
+npm run dev
+
+# or start the server and open the app in a new browser tab
+npm run dev -- --open
+```
+
+## Building
+
+To create a production version of your app:
+
+```bash
+npm run build
+```
+
+You can preview the production build with `npm run preview`.
+
+> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.

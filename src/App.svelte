@@ -10,7 +10,7 @@
 
 <script lang="ts">
     import Projects from "./lib/projects.svelte";
-    import Contacts from "./lib/contacts.svelte";
+    import Contacts from "./lib/Contacts.svelte";
     import GetComic from "./lib/getComic.svelte";
 
     let name: string = "Aibek";
