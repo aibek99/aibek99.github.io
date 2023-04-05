@@ -17,3 +17,32 @@
         </li>
     </ul>
 </div>
+
+<style>
+    .projects {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .window {
+        position: relative;
+        width: 92%;
+        height: 100vh;
+        margin-top: 15%;    
+    }
+
+    p {
+        position: relative;
+        width: 65%;
+    }
+
+    h2 {
+        position: relative;
+        width: 65%;
+    }
+
+    *{
+        font-family: sans-serif;
+    }
+
+</style>
